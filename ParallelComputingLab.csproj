@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ParallelComputingLab</RootNamespace>
+    <AssemblyName>ParallelComputingLab</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ParallelComputingLab.Tests/**" />
+    <None Remove="ParallelComputingLab.Tests/**" />
+    <EmbeddedResource Remove="ParallelComputingLab.Tests/**" />
+  </ItemGroup>
+
+</Project>
