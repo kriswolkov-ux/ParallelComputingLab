@@ -9,6 +9,18 @@ internal class Program
         RunCorrectnessChecks();
         RunLostUpdateExperiment();
 
+        int[] sizes = { 10_000, 100_000, 1_000_000, 5_000_000, 10_000_000 };
+
+        foreach (int size in sizes)
+        {
+            int[] numbers = DataGenerator.Generate(size, 12345);
+
+            BenchmarkRunner.Run(numbers);
+            BenchmarkRunner.CompareParallelism(numbers);
+
+            Console.WriteLine();
+        }
+
         Console.WriteLine("Работа завершена.");
     }
 
